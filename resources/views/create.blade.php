@@ -7,7 +7,7 @@
     <div class="flex justify-between w-8/12 mx-auto items-center my-5">
         <h1 class="text-2xl">Add Todo</h1>
         <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-            <a href="">Back</a>
+            <a href="{{route("home")}}">Back</a>
         </button>
     </div>
 
