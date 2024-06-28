@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class UpdateTodoController extends Controller
 {
-    public function index() {
-        return view("update");
+    public function index($id) {
+        $todo = Todo::findOrFail($id);
+        $context = [
+            "todo"=> $todo,
+        ];
+        return view("update")->with($context);
     }
 
-    public function store(Request $request, Todo $todo) {
+    public function update(Request $request, $id) {
         $request->validate([
             "taskname"=> "required",
             "description"=> "required",
@@ -19,7 +23,6 @@ class UpdateTodoController extends Controller
         ]);
         
         $todo = Todo::findOrFail($id);
-        $todo = Todo::findOrFail($request->id);
         $todo->update($request->all());
         return redirect()->route("home")->with("success","Updated");
     }
