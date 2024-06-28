@@ -22,7 +22,7 @@
                 </div>
 
                 <label for="description" class="block text-gray-700 font-bold mb-2 mt-2">Description</label>
-                <input type="text" name="description" class="border rounded w-full py-8 px-3 text-gray-700">
+                <input type="text" name="description" class="border rounded w-full py-2 px-3 text-gray-700">
                 <div class="text-red-600">
                     @error('description') {{$message}} @enderror
                 </div>

@@ -20,8 +20,9 @@ class UpdateTodoController extends Controller
             "taskname"=> "required",
             "description"=> "required",
             "duedate"=> "required|date",
+            "isdone"=> "nullable",
         ]);
-        
+
         $todo = Todo::findOrFail($id);
         $todo->update($request->all());
         return redirect()->route("home")->with("success","Updated");

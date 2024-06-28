@@ -22,7 +22,7 @@
                 </div>
 
                 <label for="description" class="block text-gray-700 font-bold mb-2 mt-2">Description</label>
-                <input type="text" name="description" value="{{ $todo->description }}" class="border rounded w-full py-8 px-3 text-gray-700">
+                <input type="text" name="description" value="{{ $todo->description }}" class="border rounded w-full py-2 px-3 text-gray-700">
                 <div class="text-red-600">
                     @error('description') {{$message}} @enderror
                 </div>
@@ -33,7 +33,13 @@
                     @error('duedate') {{$message}} @enderror
                 </div>
 
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6">Update</button>
+                <label for="isdone" class="block text-gray-700 font-bold mb-2 mt-2">Is Done</label>
+                <input type="checkbox" name="isdone" class="w-5 h-5 border-gray-300 rounded">
+                <div class="text-red-600">
+                    @error('isdone') {{$message}} @enderror
+                </div>
+
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Update</button>
             </form>
         </div>
     </div>

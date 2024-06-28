@@ -6,7 +6,7 @@ use App\Http\Controllers\CreateTodoController;
 use App\Http\Controllers\DeleteTodoController;
 use App\Http\Controllers\UpdateTodoController;
 
-Route::get('/', [TodoController::class,'index'])->name('home');
+Route::get('/', [TodoController::class, 'index'])->name('home');
 
 Route::get('/create', [CreateTodoController::class, 'index'])->name('createTodo');
 Route::post('/create', [CreateTodoController::class, 'store']);
