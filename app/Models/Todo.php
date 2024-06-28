@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
-    protected $table='todos';
-    protected $primary_key='id';
+    #protected $table='todos';
+    #protected $primary_key='id';
 
-    #protected $fillable = [
-    #   "taskname",
-    #   "description",
-    #   "duedate",
-    #];
+    protected $fillable = [
+       "taskname",
+       "description",
+       "duedate",
+    ];
 }

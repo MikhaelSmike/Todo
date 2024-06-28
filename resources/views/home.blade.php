@@ -7,7 +7,7 @@
     <div class="flex justify-between w-8/12 mx-auto items-center my-5">
         <h1 class="text-2xl">All Todos</h1>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="{{route("createTodo")}}">Add Todo</a>
+            <a href="{{ route("createTodo") }}">Add Todo</a>
         </button>
     </div>
 
@@ -30,7 +30,7 @@
                             <td class="px-4 py-3 w-3/12">{{ $todo->description }}</td>
                             <td class="px-4 py-3 w-3/12">{{ $todo->duedate }}</td>
                             <td class="px-4 py-3 w-3/12 space-x-2">
-                                <a href="" class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded-xl">Update</a>
+                                <a href="{{ route('updateTodo', $todo->id) }}" class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded-xl">Update</a>
                                 <a href="" class="bg-red-500 hover:bg-red-700 text-white space-x-4 py-1 px-2 rounded-xl">Delete</a>
                             </td>
                         </tr>

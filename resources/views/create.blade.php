@@ -13,7 +13,7 @@
 
     <div class="bg-pink-300 w-8/12 mx-auto border my-6 rounded-md">
         <div class="px-4">
-            <form action="" method="post" class="rounded px-4 pt-5 pb-4 mb-2">
+            <form action="{{ route('createTodo') }}" method="post" class="rounded px-4 pt-5 pb-4 mb-2">
                 @csrf
                 <label for="taskname" class="block text-gray-700 font-bold mb-2 mt-2">Task Name</label>
                 <input type="text" name="taskname" class="border rounded w-full py-2 px-3 text-gray-700">
@@ -28,12 +28,12 @@
                 </div>
 
                 <label for="duedate" class="block text-gray-700 font-bold mb-2 mt-2">Due Date</label>
-                <input type="date" name="duedate" class="border rounded w-full py-2 px-3 text-gray-700">
+                <input type="datetime-local" name="duedate" class="border rounded w-full py-2 px-3 text-gray-700">
                 <div class="text-red-600">
                     @error('duedate') {{$message}} @enderror
                 </div>
 
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6">Add</button>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6">Add</button>
             </form>
         </div>
     </div>
